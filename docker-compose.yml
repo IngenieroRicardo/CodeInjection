@@ -1,0 +1,11 @@
+version: "3.1"
+services:
+    codeinjectcion:
+        build: .
+        ports: 
+            - "80:80"
+        volumes:
+            - ./www:/var/www/html
+        networks:
+            - default
+
