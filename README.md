@@ -9,7 +9,7 @@ docker run --publish 8080:80 ghcr.io/ingenieroricardo/codeinjection:latest
 
 <hr>
 
-Al no tener validaciones se pueden enviar PHP que se pueden ejecutar como esto:
+Al no tener validaciones se pueden enviar PHP que se pueden ejecutar como estos:
 
 ```php
 <?php
