@@ -1,6 +1,6 @@
 # Code Injection
 
-Descargar y Montar el servidor desde Docker usando un volumen con el Codigo Fuente de Github para editarlo:
+Descargar y Montar el servidor con Docker:
 
 ```bash
 git clone https://github.com/IngenieroRicardo/CodeInjection
