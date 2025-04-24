@@ -1,0 +1,10 @@
+version: "2"
+services:
+  webserver:
+    container_name: CodeInjection
+    #https://hub.docker.com/layers/library/php/8.4.5-apache/images/sha256-8e6b1f20f637c356ec48720eee65845f002310526e292822c519bd06fc5e41cc
+    image: php:8.4.5-apache 
+    ports:
+      - "8181:80"
+    volumes:
+      - ./:/var/www/html
