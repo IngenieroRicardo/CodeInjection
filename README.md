@@ -4,8 +4,8 @@ Descargar y Montar el servidor desde Docker usando un volumen con el Codigo Fuen
 
 ```bash
 git clone https://github.com/IngenieroRicardo/CodeInjection
-docker pull ghcr.io/ingenieroricardo/codeinjection:latest
-docker run --publish 8080:80 -v ./CodeInjection:/var/www/html ghcr.io/ingenieroricardo/codeinjection:latest
+sudo docker-compose up
+firefox localhost:8181
 ```
 
 <hr>
