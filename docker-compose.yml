@@ -1,10 +1,27 @@
-version: "2"
+version: '2'
 services:
-  webserver:
-    container_name: CodeInjection
-    #https://hub.docker.com/layers/library/php/8.4.5-apache/images/sha256-8e6b1f20f637c356ec48720eee65845f002310526e292822c519bd06fc5e41cc
-    image: php:8.4.5-apache 
+  basededatos:
+    build:
+      context: ./
+      dockerfile: Dockerfile_MariaDB
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: chat
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+    container_name: SQLInjection_DB
     ports:
-      - "8181:80"
-    volumes:
-      - ./:/var/www/html
+      - "5001:3306"
+    tty: true
+
+
+  aplicacion:
+    build:
+      context: ./
+      dockerfile: Dockerfile_PHP+Apache
+    container_name: SQLInjection
+    ports:
+      - "5002:80"
+    tty: true
+    depends_on:
+      - basededatos
