@@ -4,6 +4,8 @@ Descargar y Montar el servidor desde Docker usando un volumen con el Codigo Fuen
 
 ```bash
 git clone https://github.com/IngenieroRicardo/CodeInjection
+cd CodeInjection
+sudo chmod -R a+rwx *
 sudo docker-compose up
 firefox localhost:8181
 ```
