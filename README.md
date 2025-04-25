@@ -28,4 +28,7 @@ Con este codigo podemos conocer los archivos en el servidor
   show_source("../archivos.php");
 ?>
 ```
-Con este codigo podemos ver codigo fuente
+Con este codigo podemos ver codigo fuente.
+
+
+Imagen en Dockerhub: https://hub.docker.com/repository/docker/ingenieroricardo/codeinjection/general
