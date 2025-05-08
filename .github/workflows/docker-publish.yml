@@ -15,8 +15,7 @@ jobs:
     steps:
       - name: Log in Git Hub
         run: |
-          echo "${{ secrets.DOCKER_TOKEN }}" | docker login ghcr.io --username ${{ secrets.GIT_USERNAME }} --password-stdin
-
+          echo "${{ secrets.GIT_TOKEN }}" | docker login ghcr.io --username ${{ secrets.GIT_USERNAME }} --password-stdin
 
       - uses: actions/checkout@v4
       - name: Build and tag image
